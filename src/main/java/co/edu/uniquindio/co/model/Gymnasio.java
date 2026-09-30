@@ -4,56 +4,43 @@ import java.util.ArrayList;
 
 public class Gymnasio {
     private String nombre;
-    private String codigo;
+    private String codigoGym;
     private String direccion;
     private String telefono;
 
     private ArrayList<Usuario> listaUsuarios;
     private ArrayList<Entrenador> listaEntrenadores;
 
-    public Gymnasio (String nombre, String codigo, String direccion, String telefono){
+    // Constructor
+    public Gymnasio(String nombre, String codigoGym, String direccion, String telefono) {
         this.nombre = nombre;
-        this.codigo = codigo;
+        this.codigoGym = codigoGym;
         this.direccion = direccion;
         this.telefono = telefono;
-        listaUsuarios = new ArrayList<>();
-        listaEntrenadores = new ArrayList<>();
-    }
-    public void setNombre(){
-        this.nombre = nombre;
-    }
-    public String getNombre(){
-        return nombre;
-    }
-    public void setCodigo(){
-        this.codigo = codigo;
-    }
-    public String getCodigo(){
-        return codigo;
-    }
-    public void setDireccion(){
-        this.direccion = direccion;
-    }
-    public String getDireccion(){
-        return direccion;
-    }
-    public void setTelefono(){
-        this.telefono = telefono;
-    }
-    public String getTelefono(){
-        return telefono;
+        this.listaUsuarios = new ArrayList<>();
+        this.listaEntrenadores = new ArrayList<>();
     }
 
-    public String registrarEntrenador(String nombre,String edad, String documento, String telefono, String especialidad, byte añosDeExperiencia){
-        String mensaje = "";
+    // Getters
+    public String getNombre() { return nombre; }
+    public String getCodigoGym() { return codigoGym; }
+    public String getDireccion() { return direccion; }
+    public String getTelefono() { return telefono; }
+
+    // Setters
+    public void setNombre(String nombre) { this.nombre = nombre; }
+    public void setCodigoGym(String codigoGym) { this.codigoGym = codigoGym; }
+    public void setDireccion(String direccion) { this.direccion = direccion; }
+    public void setTelefono(String telefono) { this.telefono = telefono; }
+
+    public String registrarEntrenador(String nombre, String edad, String documento,
+                                      String telefono, String especialidad, byte añosDeExperiencia) {
         Entrenador buscado = buscarEntrenador(documento);
-        if(buscado != null){
-            return "Error el estudiante que usted desea registra ya se encuentra registrado";
-        }else{
-            Entrenador entrenadorNuevo = new Entrenador(nombre,documento,edad,telefono, especialidad, añosDeExperiencia);
-            listaEntrenadores.add(entrenadorNuevo);
-            mensaje = "Estudiante registrado con exito";
+        if (buscado != null) {
+            return "Error: el entrenador que desea registrar ya se encuentra registrado";
         }
-        return mensaje;
+        Entrenador entrenadorNuevo = new Entrenador(nombre, documento, edad, telefono, especialidad, añosDeExperiencia);
+        listaEntrenadores.add(entrenadorNuevo);
+        return "Entrenador registrado con éxito";
     }
 }
