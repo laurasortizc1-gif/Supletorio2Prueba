@@ -7,6 +7,6 @@ public class Entrenador {
     private String documento;
     private String telefono;
     private String especialidad;
-    private byte nombre;
+    private String apellido;
 
 }
