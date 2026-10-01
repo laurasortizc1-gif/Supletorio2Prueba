@@ -87,7 +87,6 @@ public class Maquina {
                 ", valorMantenimiento=" + valorMantenimiento +
                 '}';
     }
-
     //funcionalidades o metodos
     public Maquina buscarMaquina(String codigo) {
         for (Maquina aux : listaMaquinas) {
