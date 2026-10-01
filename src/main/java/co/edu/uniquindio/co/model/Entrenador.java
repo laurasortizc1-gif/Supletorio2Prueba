@@ -8,6 +8,7 @@ public class Entrenador {
     private String telefono;
     private String especialidad;
     private byte añosExperiencia;
+    private Gymnasio ownedByGymnasio;
 
 
     //metodo constructor
