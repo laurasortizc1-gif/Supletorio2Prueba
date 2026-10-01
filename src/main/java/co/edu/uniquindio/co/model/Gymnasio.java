@@ -14,7 +14,7 @@ public class Gymnasio {
     private ArrayList<Reserva> listaReservas;
 
     // Constructor
-    public Gymnasio(String nombre, String codigoGym, String direccion, String telefono) {
+    public Gymnasio(String nombre, String codigoGym) {
         this.nombre = nombre;
         this.codigoGym = codigoGym;
         this.direccion = direccion;

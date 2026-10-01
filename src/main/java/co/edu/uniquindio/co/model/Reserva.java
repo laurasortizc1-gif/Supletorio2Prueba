@@ -1,6 +1,10 @@
 package co.edu.uniquindio.co.model;
 
+import java.util.ArrayList;
+
 public class Reserva {
+
+    private ArrayList<Maquina> listaMaquinas;
     private String codigo;
     private String fecha;
     private String hora;
@@ -8,6 +12,9 @@ public class Reserva {
     private String estado;
     private String tipo;
     private float valor;
+
+    //relacion
+    private Reserva ownedByCurso;
 
     public Reserva (String codigo, String fecha, String hora, byte duracion, String estado, String tipo, float valor){
         this.codigo = codigo;
@@ -17,6 +24,7 @@ public class Reserva {
         this.estado = estado;
         this.tipo = tipo;
         this.valor = valor;
+        this.listaMaquinas= new ArrayList<>();
     }
     public void setCodigo(){
         this.codigo = codigo;

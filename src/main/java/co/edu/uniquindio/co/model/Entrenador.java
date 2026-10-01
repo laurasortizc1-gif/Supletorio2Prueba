@@ -74,4 +74,18 @@ public class Entrenador {
     public void setAñosExperiencia(byte añosExperiencia) {
         this.añosExperiencia = añosExperiencia;
     }
+
+    //metodo mostrar
+
+    @Override
+    public String toString() {
+        return "Entrenador{" +
+                "nombre='" + nombre + '\'' +
+                ", edad=" + edad +
+                ", documento='" + documento + '\'' +
+                ", telefono='" + telefono + '\'' +
+                ", especialidad='" + especialidad + '\'' +
+                ", añosExperiencia=" + añosExperiencia +
+                '}';
+    }
 }
