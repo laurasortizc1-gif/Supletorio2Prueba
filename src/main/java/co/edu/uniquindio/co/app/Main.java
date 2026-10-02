@@ -1,5 +1,6 @@
 package co.edu.uniquindio.co.app;
 
+import co.edu.uniquindio.co.model.Entrenador;
 import co.edu.uniquindio.co.model.Gymnasio;
 import  co.edu.uniquindio.co.model.Maquina;
 import  co.edu.uniquindio.co.model.Reserva;
@@ -8,10 +9,69 @@ import javax.swing.*;
 import java.util.ArrayList;
 
 public class Main {
+
+
     static <ingresar> void main() {
 
 
         }
+//metodo analisis entrenador
+    public String analizarentrenador( ArrayList<Entrenador> listaEntrenadores,
+                                      ArrayList<Reserva> listaReserva){
+        //entrenadorMayorSesiones
+        String mensaje="";
+        int mayor=0;
+        Entrenador entrenadorMayor=null;
+
+
+        for(Entrenador entrenador: listaEntrenadores){
+            int contador=0;
+            for(Reserva reserva:listaReserva){
+                if(reserva.getentrenador().equals(entrenador){
+                    contador++;
+                }
+            }
+            if(contador>mayor){
+                mayor=contador;
+                entrenadorMayor=entrenador;
+            }
+        }
+        mensaje+="el entrenador con mayor sesiones es: "+entrenadorMayor.getNombre();
+
+        //entrenadormenorsesiones
+        int menor=0;
+        Entrenador entrenadorMenor=null;
+        for (Entrenador entrenador:listaEntrenadores){
+            int contador=0;
+            for(Reserva reserva:listaReserva){
+                if(reserva.getentrenador().equals(entrenador)){
+                    contador++;
+                }
+            }
+            if(contador<menor){
+                menor=contador;
+                entrenadorMenor=entrenador;
+            }
+        }
+        mensaje+="entrenador con menor numero de sesiones: "+entrenadorMenor.getNombre();
+
+        //total usuarios por entrenador
+        int contador=0;
+        for(Entrenador entrenador:listaEntrenadores){
+
+            for(Reserva reserva;listaReserva){
+                if(reserva.getentrenador().equals(entrenador)){
+                    contador++;
+
+                }
+            }
+        }
+        mensaje+="el entrenador: "+entrenador.get()+"\n"
+                +"atendio: "+contador;
+    }
+
+
+
 
         //metodo matriz ocupacional
     public String SacarOcupacionGym(String zona, String fecha, String Usuario,

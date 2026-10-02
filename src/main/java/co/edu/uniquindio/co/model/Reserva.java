@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Reserva {
 
+    public boolean getentrenador;
     private ArrayList<Maquina> listaMaquinas;
     private String codigo;
     private String fecha;
