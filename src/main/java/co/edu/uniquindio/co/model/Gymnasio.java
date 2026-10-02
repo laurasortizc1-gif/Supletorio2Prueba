@@ -89,7 +89,8 @@ public class Gymnasio {
         }
         return null;
     }
-    public String registrarMaquina(String codigo, String nombre, String tipo, String zona, String estado, float valorMantenimiento) {
+    public String registrarMaquina(String codigo, String nombre, String tipo, String zona,
+                                   String estado, float valorMantenimiento) {
         Maquina buscado = buscarMaquina(codigo);
         if (buscado != null) {
             return "Error: La maquina que desea registrar ya se encuentra registrada";

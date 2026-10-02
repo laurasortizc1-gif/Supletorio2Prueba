@@ -33,43 +33,43 @@ public class Usuario {
 
     //Set y Get
 
-    public void setNombre(){
+    public void setNombre(String nombre){
         this.nombre = nombre;
     }
     public String getNombre(){
         return nombre;
     }
-    public void setEdad(){
+    public void setEdad(byte edad){
         this.edad = edad;
     }
     public byte getEdad(){
         return edad;
     }
-    public void setDocumento(){
+    public void setDocumento(String documento){
         this.documento = documento;
     }
     public String getDocumento(){
         return documento;
     }
-    public void setTelefono(){
+    public void setTelefono(String telefono){
         this.telefono = telefono;
     }
     public String getTelefono(){
         return telefono;
     }
-    public void setPeso(){
+    public void setPeso(float peso){
         this.peso = peso;
     }
     public float getPeso(){
         return peso;
     }
-    public void setMembresia(){
+    public void setMembresia(String membresia){
         this.membresia = membresia;
     }
     public String getMembresia(){
         return membresia;
     }
-    public void setListaReservas(){
+    public void setListaReservas(ArrayList listaReservas){
         this.listaReservas = listaReservas;
     }
     public ArrayList<Reserva> getListaReservas(){

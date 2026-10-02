@@ -87,6 +87,7 @@ public class Maquina {
                 ", valorMantenimiento=" + valorMantenimiento +
                 '}';
     }
+
     //funcionalidades o metodos
     public Maquina buscarMaquina(String codigo) {
         for (Maquina aux : listaMaquinas) {
@@ -96,7 +97,8 @@ public class Maquina {
         }
         return null;
     }
- //actualizar estado de la maquina
+
+    //actualizar estado de la maquina
     public String actualizarEstadoMaquina(String codigo, String nuevoEstado) {
         if (nuevoEstado == null) {
             return "Error: el nuevo estado no es valido";
@@ -108,33 +110,4 @@ public class Maquina {
         buscada.setEstado(nuevoEstado);
         return "Estado de la máquina actualizado con éxito";
     }
-    //maquina mayorvalormantenimiento
-    public String sacarMaquinamayorvalorM(String estado, String valorMantenimiento, ArrayList<Maquina> listaMaquinas) {
-        if(listaMaquinas.isEmpty()){
-            return null;
-        }
-        Maquina mayor= (Maquina) listaMaquinas.get(0);
-        for(Maquina maquina: listaMaquinas){
-            if(maquina.getEstado().equals("mantenimiento") && maquina.getValorMantenimiento()
-                    > mayor.getValorMantenimiento()){
-                mayor=maquina;
-            }
-        }
-        return mayor.getCodigo();
-    }
-
-    //maquina menorvalormantenimiento
-    public String sacarMaquinamenorvalorM(String estado, String valorMantenimiento, ArrayList<Maquina> listaMaquinas) {
-        if(listaMaquinas.isEmpty()){
-            return null;
-        }
-        Maquina menor= (Maquina) listaMaquinas.get(0);
-        for(Maquina maquina: listaMaquinas){
-            if(maquina.getEstado().equals("mantenimiento") && maquina.getValorMantenimiento()
-                    < menor.getValorMantenimiento()){
-                menor=maquina;
-            }
-        }
-        return menor.getCodigo();
-    }
-    }
+}
