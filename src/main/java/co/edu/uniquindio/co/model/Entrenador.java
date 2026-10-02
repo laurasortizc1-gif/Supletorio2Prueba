@@ -21,6 +21,7 @@ public class Entrenador {
         this.telefono=telefono;
         this.especialidad=especialidad;
         this.añosExperiencia=añosExperiencia;
+
     }
 
     //getter
