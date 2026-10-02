@@ -26,43 +26,43 @@ public class Reserva {
         this.valor = valor;
         this.listaMaquinas= new ArrayList<>();
     }
-    public void setCodigo(){
+    public void setCodigo(String codigo){
         this.codigo = codigo;
     }
     public String getCodigo(){
         return codigo;
     }
-    public void setFecha(){
+    public void setFecha(String fecha){
         this.fecha = fecha;
     }
     public String getFecha(){
         return fecha;
     }
-    public void setHora(){
+    public void setHora(String hora){
         this.hora = hora;
     }
     public String getHora(){
         return hora;
     }
-    public void setDuracion(){
+    public void setDuracion(byte duracion){
         this.duracion = duracion;
     }
     public byte getDuracion(){
         return duracion;
     }
-    public void setEstado(){
+    public void setEstado(String estado){
         this.estado = estado;
     }
     public String getEstado(){
         return estado;
     }
-    public void setTipo(){
+    public void setTipo(String tipo){
         this.tipo = tipo;
     }
     public String getTipo(){
         return tipo;
     }
-    public void setValor(){
+    public void setValor(float valor){
         this.valor = valor;
     }
     public float getValor(){
